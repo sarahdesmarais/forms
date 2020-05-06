@@ -4,19 +4,64 @@
   <meta charset="utf-8">
   <title>Forms</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="css/modules.css" rel="stylesheet">
+  <link href="css/grid.css" rel="stylesheet">
+  <link href="css/type.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
 
-  <div>
-    <div class="relative label-inside">
+  <form class="wrapper grid pad-t" method="post" action="#">
+    <div class="unit [ xs-1 ] push-1-2">
+      <legend>Form</legend>
+    </div>
+    <div class="unit [ xs-1 ] relative label-inside push-1-2">
+      <input class="milli" type="text" id="name" required aria-describedby="name-error">
+      <label class="push-1-4 pico" for="name">Name</label>
+      <p class="error-message pico island-1-4 push-0" id="name-error">
+        <span class="icon-label">Please provide a first name</span>
+      </p>
+    </div>
+
+    <div class="unit [ xs-1-2 ] relative label-inside push-1-2 pad-r-1-2">
+      <input class="milli" type="tel" id="address" required aria-describedby="address-error">
+      <label class="push-1-4 pico" for="address">Address</label>
+      <p class="error-message pico island-1-4 push-0" id="phone-error">
+        <span class="icon-label">Please provide an address</span>
+      </p>
+    </div>
+
+    <div class="unit [ xs-1-2 ] relative label-inside push-1-2">
+      <input class="milli" id="province" list="province-list" required>
+      <label class="pico" for="province">Province</label>
+      <datalist id="province-list">
+        <option value="Alberta">
+        <option value="Ontario">
+        <option value="Québec">
+        <option value="Nova Scotia">
+      </datalist>
+    </div>
+
+    <div class="unit [ xs-1 ] relative label-inside push-1-2">
       <input class="milli" type="email" id="email" required aria-describedby="email-error">
       <label class="push-1-4 pico" for="email">Email</label>
       <p class="error-message pico island-1-4 push-0" id="email-error">
         <span class="icon-label">Please provide an email</span>
       </p>
     </div>
-  </div>
+
+    <div class="unit [ xs-1 ] relative label-inside push-1-2">
+      <input class="milli" type="tel" id="phone" required aria-describedby="phone-error">
+      <label class="push-1-4 pico" for="phone">Phone Number</label>
+      <p class="error-message pico island-1-4 push-0" id="phone-error">
+        <span class="icon-label">Please provide a phone number</span>
+      </p>
+    </div>
+
+    <div class="unit [ xs-1 ] pad-t-1-2">
+      <button type="submit" class="btn micro gutter-2 sans-serif" href="#">Submit</button>
+    </div>
+  </form>
 
 </body>
 </html>

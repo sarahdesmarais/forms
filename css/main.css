@@ -1,0 +1,74 @@
+.label-inside label {
+  position: absolute;
+  left: 0.5em;
+  top: 1.1em;
+  transition: all 0.3s ease;
+}
+
+.label-inside input:focus + label,
+.label-inside input:valid + label {
+  top: 0;
+}
+
+.equal-height input {
+  height: auto;
+}
+
+input {
+  border: 1px solid #e2e2e2;
+  font-family: Arial;
+}
+
+input:not([type="checkbox"]),
+input:not([type="radio"]) {
+  padding-top: 0.8em;
+  height: auto;
+}
+
+input:focus {
+  outline: none;
+}
+
+label {
+  font-family: Arial;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.is-validated input:invalid,
+.is-validated input[type="checkbox"]:invalid + label::before,
+.is-validated:invalid,
+.is-validated[type="checkbox"]:invalid + label::before {
+  border-color: red;
+}
+
+.error-message {
+  display: none;
+  color: red;
+}
+
+.error-message-highlighted {
+  background-color: grey;
+  color: #fff;
+}
+
+.is-validated > .error-message:first-child,
+.is-validated input:invalid + .error-message,
+.is-validated input:invalid + label + .error-message,
+.is-validated:invalid + .error-message,
+.is-validated:invalid + label + .error-message {
+  display: block;
+}
+
+.sans-serif {
+  font-family: Arial;
+}
+
+.btn {
+  font-family: Arial;
+  text-transform: uppercase;
+}
+
+.pad-r-1-2 {
+  padding-right: .65rem;
+}
